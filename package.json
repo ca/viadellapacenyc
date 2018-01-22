@@ -1,5 +1,5 @@
 {
-  "name": "base-startup",
+  "name": "viadellapacenyc",
   "version": "0.0.0",
   "server": false,
   "private": true,
@@ -17,7 +17,7 @@
     "express": "latest",
     "rimraf": "latest"
   },
-  "app": "5a511633b06cbe0014f4b6eb",
+  "app": "5a667739f3167d0014fb84d3",
   "deploy": [
     "."
   ],
