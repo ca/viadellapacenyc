@@ -34,7 +34,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/about', (req, res) => {
-	turbo.pageData('about')
+	turbo.pageData('About')
 	.then(static => {
 		res.render('about', { static: static });
 	})
