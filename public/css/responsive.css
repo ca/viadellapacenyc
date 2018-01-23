@@ -1,0 +1,101 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (max-width : 767px) {
+
+.nav-toggle{ display: block !important; }
+nav.logo-center{ background: rgba(255,255,255,0.9); max-height: 70px; overflow: hidden; padding-top: 70px; -webkit-transition: all .5s ease; transition: all .5s ease; -moz-transition: all .5s ease; }
+.logo-center.fixed-nav{ padding-top: 66px !important; }
+.open-nav{ max-height: 800px !important; }
+.logo-center .medium-2{ display: none; }
+.logo-center .menu{ width: 100%; text-align: left !important; }
+.logo-center .menu li{ padding-left: 0px; padding-right: 0px; float: none; padding-bottom: 11px; }
+.logo-center .menu li a{ color: #333; }
+
+nav.top-bar .menu{ text-align: center; }
+nav.top-bar .menu li{ padding-left: 0px; float: none; padding-bottom: 0px; }
+
+.video-wrapper{ display: none; }
+
+p{ font-size: 12px; line-height: 16px; }
+h3{ margin-bottom: 11px; }
+hr{ margin: 22px 0px; }
+.headline-style-2 .sub-title{ letter-spacing: 6px; margin-right: -6px; }
+
+.menu-item{ padding: 0px !important; width: 100% !important; }
+.narrow-menu .menu-item{ width: 100%; padding-right: 0px; padding-left: 0px; }
+.sub-title{ line-height: 1.8; }
+#instafeed a img{ width: 33.3333333%; }
+#instafeed a:nth-child(n+4){ display: none;  }
+.gallery-slider .slides li{ height: 250px; }
+.no-pad p.columns{ padding: 0px !important; }
+
+
+nav.off-screen{ padding: 33px; }
+nav.off-screen .bottom-content{ display: none; }
+nav .push-large{ display: none; }
+nav.off-screen .nav-toggle{ right: 310px; top: 15px; }
+
+.off-screen.reveal-nav .nav-toggle{ right: 240px !important; }
+
+.divider-background{ padding: 50px 0px; }
+.headline-style-1 h1{ font-size: 60px; }
+.headline-style-1 .sub-title{ font-size: 10px; letter-spacing: 1px; }
+.flex-direction-nav{ display: none; }
+.headline-style-2 h3{ font-size: 60px; line-height: 80px; }
+h3{ font-size: 22px; }
+.no-left-pad{ padding-left: 15px !important; }
+
+
+.reviews .columns{ margin-bottom: 22px; }
+.no-pad .columns{ padding: 88px 15px; }
+
+}
+
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+
+.no-pad .columns{ padding-left: 15px !important; padding-right: 15px; }
+.no-pad .medium-6{ width: 75% !important; }
+.no-pad .photo-container{ width: 25% !important; }
+
+.menu .medium-9{ width: 100%; }
+.menu .menu-item:nth-child(even){ float:right; }
+
+.photo-container.left-align{ display: none; }
+
+.no-pad .medium-6.right{ width: 100% !important; }
+
+.no-pad p.medium-6{ width: 50% !important; }
+
+.reviews .sub-title{ line-height: 18px; }
+
+
+#instafeed a img{ width: 16.666667%; }
+#instafeed a:nth-child(n+7){ display: none;  }
+
+
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+
+.divider-background{ padding: 80px 0px; }	
+.hero-slider .flex-direction-nav a{ top: auto; bottom: 44px; }
+
+.gallery-slider .slides li{ height: 400px; }
+.no-left-pad{ padding-right: 15px !important; }
+nav.off-screen .bottom-content{ display: none; }
+
+.video-wrapper{ display: none; }
+
+
+
+}

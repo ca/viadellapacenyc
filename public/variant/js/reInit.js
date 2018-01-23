@@ -1,4 +1,5 @@
-$(document).ready(function () {
+function reInit(target){
+
 
 
     /************** Navigation Scripts **************/
@@ -7,16 +8,16 @@ $(document).ready(function () {
 
     // Mobile Toggle Control
 
-    $('.mobile-toggle').click(function () {
-        $('nav').toggleClass('open-nav');
+    $(target+' .mobile-toggle').click(function () {
+        $(target+' nav').toggleClass('open-nav');
     });
 
-    $('.has-dropdown').click(function () {
-        if ($('.mobile-toggle').is(":visible")) {
+    $(target+' .has-dropdown').click(function () {
+        if ($(target+' .mobile-toggle').is(":visible")) {
             if ($(this).children('.subnav').hasClass('open-nav')) {
                 $(this).children('.subnav').removeClass('open-nav');
             } else {
-                $('.subnav').removeClass('open-nav');
+                $(target+' .subnav').removeClass('open-nav');
                 $(this).children('.subnav').addClass('open-nav');
             }
         }
@@ -25,12 +26,12 @@ $(document).ready(function () {
 
     // Inner links
 
-    if ($('.off-screen').length) {
-        $('.inner-link').smoothScroll({
+    if ($(target+' .off-screen').length) {
+        $(target+' .inner-link').smoothScroll({
             speed: 900
         });
     } else {
-        $('.inner-link').smoothScroll({
+        $(target+' .inner-link').smoothScroll({
             speed: 900,
             offset: -68
         });
@@ -40,7 +41,7 @@ $(document).ready(function () {
 
     // Disable default behaviour on href='#' links
 
-    $('a').click(function () {
+    $(target+' a').click(function () {
         if ($(this).attr('href') === '#') {
             return false;
         }
@@ -50,15 +51,15 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
         if (window.scrollY > 500) {
-            $('.nav-overlay').addClass('fixed-nav');
+            $(target+' .nav-overlay').addClass('fixed-nav');
         } else {
-            $('.nav-overlay').removeClass('fixed-nav');
+            $(target+' .nav-overlay').removeClass('fixed-nav');
         }
 
-        if (window.scrollY > $('nav').outerHeight()) {
-            $('.nav-overlay').css('top', -200);
+        if (window.scrollY > $(target+' nav').outerHeight()) {
+            $(target+' .nav-overlay').css('top', -200);
         } else {
-            $('.nav-overlay').css('top', 0);
+            $(target+' .nav-overlay').css('top', 0);
         }
     });
 
@@ -66,42 +67,42 @@ $(document).ready(function () {
 
 
 
-    $('.off-screen .nav-toggle').click(function () {
-        $('.off-screen').toggleClass('reveal-nav');
-        $('.main-container').toggleClass('move-content');
-        $('.footer-container').toggleClass('move-content');
+    $(target+' .off-screen .nav-toggle').click(function () {
+        $(target+' .off-screen').toggleClass('reveal-nav');
+        $(target+' .main-container').toggleClass('move-content');
+        $(target+' .footer-container').toggleClass('move-content');
     });
 
-    $('.main-container').click(function () {
+    $(target+' .main-container').click(function () {
         if ($(this).hasClass('move-content')) {
             $(this).removeClass('move-content');
-            $('.off-screen').removeClass('reveal-nav');
-            $('.footer-container').toggleClass('move-content');
+            $(target+' .off-screen').removeClass('reveal-nav');
+            $(target+' .footer-container').toggleClass('move-content');
         }
     });
 
     // Logo center nav on mobile
 
-    $('.logo-center .nav-toggle').click(function () {
-        $('.logo-center').toggleClass('open-nav');
+    $(target+' .logo-center .nav-toggle').click(function () {
+        $(target+' .logo-center').toggleClass('open-nav');
     });
 
     /************** Slider Scripts **************/
 
     // Initialize Sliders
 
-    $('.hero-slider').flexslider({
+    $(target+' .hero-slider').flexslider({
         slideshow: false
     });
 
-    $('.testimonials-slider').flexslider({
+    $(target+' .testimonials-slider').flexslider({
         directionNav: false,
         controlNav: false
     });
 
-    $('.gallery-slider').flexslider({});
+    $(target+' .gallery-slider').flexslider({});
 
-    $('.slider').flexslider({
+    $(target+' .slider').flexslider({
         directionNav: false
     });
 
@@ -109,9 +110,9 @@ $(document).ready(function () {
 
     // Adjust slide height for .slider-fullscreen sliders
 
-    $('.slider-fullscreen .slides li').each(function () {
-        if ($('.top-bar').is(':visible')) {
-            var slideHeight = $(window).height() - $('.top-bar').outerHeight() + 10;
+    $(target+' .slider-fullscreen .slides li').each(function () {
+        if ($(target+' .top-bar').is(':visible')) {
+            var slideHeight = $(window).height() - $(target+' .top-bar').outerHeight() + 10;
             $(this).css('height', slideHeight);
 
 
@@ -121,9 +122,9 @@ $(document).ready(function () {
     });
 
     $(window).resize(function () {
-        $('.slider-fullscreen .slides li').each(function () {
-            if ($('.top-bar').is(':visible')) {
-                var slideHeight = $(window).height() - $('.top-bar').outerHeight();
+        $(target+' .slider-fullscreen .slides li').each(function () {
+            if ($(target+' .top-bar').is(':visible')) {
+                var slideHeight = $(window).height() - $(target+' .top-bar').outerHeight();
                 console.log(slideHeight);
                 $(this).css('height', slideHeight + '!important');
 
@@ -134,7 +135,7 @@ $(document).ready(function () {
         });
     });
 
-    $('.slides li').each(function () {
+    $(target+' .slides li').each(function () {
 
         // Append background-image <img>'s as li item CSS background for better responsive performance
 
@@ -149,8 +150,8 @@ $(document).ready(function () {
 
         // Center Slide Content vertically
 
-        if ($('.overlay-nav').length && !$('nav').hasClass('nav-transparent')) {
-            $(this).children('.slide-content').css('padding-top', ($(this).height() / 2) - ($(this).children('.slide-content').height() / 2) + $('.overlay-nav').height());
+        if ($(target+' .overlay-nav').length && !$(target+' nav').hasClass('nav-transparent')) {
+            $(this).children('.slide-content').css('padding-top', ($(this).height() / 2) - ($(this).children('.slide-content').height() / 2) + $(target+' .overlay-nav').height());
         } else {
             $(this).children('.slide-content').css('padding-top', ($(this).height() / 2) - ($(this).children('.slide-content').height() / 2));
         }
@@ -159,9 +160,9 @@ $(document).ready(function () {
 
     $(window).resize(function () {
 
-        $('.slides li').each(function () {
-            if ($('.overlay-nav').length && !$('nav').hasClass('nav-transparent')) {
-                $(this).children('.slide-content').css('padding-top', ($(this).height() / 2) - ($(this).children('.slide-content').height() / 2) + $('.overlay-nav').height());
+        $(target+' .slides li').each(function () {
+            if ($(target+' .overlay-nav').length && !$(target+' nav').hasClass('nav-transparent')) {
+                $(this).children('.slide-content').css('padding-top', ($(this).height() / 2) - ($(this).children('.slide-content').height() / 2) + $(target+' .overlay-nav').height());
             } else {
                 $(this).children('.slide-content').css('padding-top', ($(this).height() / 2) - ($(this).children('.slide-content').height() / 2));
             }
@@ -172,7 +173,7 @@ $(document).ready(function () {
 
     /************** Divider Scripts **************/
 
-    $('.background-image-holder').each(function () {
+    $(target+' .background-image-holder').each(function () {
 
         // Append background-image <img>'s as li item CSS background for better responsive performance
         var imgSrc = $(this).children('.background-image').attr('src');
@@ -187,15 +188,15 @@ $(document).ready(function () {
 
     // Set the videos height at the wrappers width so it takes up the whole space of the divider
 
-    $('.video-wrapper').each(function () {
+    $(target+' .video-wrapper').each(function () {
         var height = $(this).width();
         $(this).css('height', height);
 
-        if ($(this).width() < $('.row').width()) {
+        if ($(this).width() < $(target+' .row').width()) {
             $(this).css('width', height * 2);
         }
 
-        if ($(this).width() > $('.row').width()) {
+        if ($(this).width() > $(target+' .row').width()) {
             $(this).css('width', height * 1.5);
         }
     });
@@ -203,7 +204,7 @@ $(document).ready(function () {
     // and do this on resize!
 
     $(window).resize(function () {
-        $('.video-wrapper').each(function () {
+        $(target+' .video-wrapper').each(function () {
             var height = $(this).width();
             $(this).css('height', height);
         });
@@ -226,9 +227,9 @@ $(document).ready(function () {
         prefix = '-webkit-';
     }
 
-    $('.main-container section:first-child').addClass('first-child');
+    $(target+' .main-container section:first-child').addClass('first-child');
 
-    $('.parallax-background').each(function () {
+    $(target+' .parallax-background').each(function () {
 
         if ($(this).closest('section').hasClass('first-child') && !$(this).closest('section').hasClass('slider-fullscreen')) {
             $(this).attr('data-top', prefix + 'transform: translate3d(0px,0px, 0px)');
@@ -253,8 +254,8 @@ $(document).ready(function () {
 
     /************** Tabbed Menu Scripts **************/
 
-    $('.menu-filters li').click(function () {
-        $('.menu-filters li').removeClass('active');
+    $(target+' .menu-filters li').click(function () {
+        $(target+' .menu-filters li').removeClass('active');
         $(this).addClass('active');
         var menuType = $(this).attr('data-menu-type');
 
@@ -265,21 +266,21 @@ $(document).ready(function () {
 
     /************** OpenTable form Scripts **************/
 
-    $('#OT_defList dt').each(function () {
+    $(target+' #OT_defList dt').each(function () {
         $(this).html('');
     });
 
-    $('.open-table-button').click(function () {
-        $('#ism').submit();
+    $(target+' .open-table-button').click(function () {
+        $(target+' #ism').submit();
         return false;
     });
 
-    $('.open-table-container').each(function () {
+    $(target+' .open-table-container').each(function () {
         var restaurantID = $(this).attr('data-restaurant-id');
         $(this).find('.OT_hidden[name="RestaurantID"]').attr('value', restaurantID);
     });
 
-    $('.datepicker').datepicker({
+    $(target+' .datepicker').datepicker({
         onSelect: function (selectedDate) {
             // custom callback logic here
             $(this).attr('value', selectedDate);
@@ -289,12 +290,12 @@ $(document).ready(function () {
 
     /************** Map Scripts **************/
 
-    $('.map .overlay').click(function () {
+    $(target+' .map .overlay').click(function () {
         $(this).hide();
     });
 
     $(window).scroll(function () {
-        $('.map .overlay').show();
+        $(target+' .map .overlay').show();
     });
 
 
@@ -305,7 +306,7 @@ $(document).ready(function () {
         clientID: 'fedaafacf224447e8aef74872d3820a1'
     };
 
-    $('.instafeed').each(function () {
+    $(target+' .instafeed').each(function () {
         $(this).children('ul').spectragram('getUserFeed', {
             query: $(this).attr('data-user-name')
         });
@@ -316,15 +317,15 @@ $(document).ready(function () {
 
     // Set the videos height at the wrappers width so it takes up the whole space of the divider
 
-    $('.video-wrapper').each(function () {
+    $(target+' .video-wrapper').each(function () {
         var height = $(this).width();
         $(this).css('height', height);
 
-        if ($(this).width() < $('.row').width()) {
+        if ($(this).width() < $(target+' .row').width()) {
             $(this).css('width', height * 2);
         }
 
-        if ($(this).width() > $('.row').width()) {
+        if ($(this).width() > $(target+' .row').width()) {
             $(this).css('width', height * 1.5);
         }
     });
@@ -332,7 +333,7 @@ $(document).ready(function () {
     // and do this on resize!
 
     $(window).resize(function () {
-        $('.video-wrapper').each(function () {
+        $(target+' .video-wrapper').each(function () {
             var height = $(this).width();
             $(this).css('height', height);
         });
@@ -379,4 +380,7 @@ $(document).ready(function () {
 
     });
 
-});
+
+
+
+}
