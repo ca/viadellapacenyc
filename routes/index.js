@@ -15,7 +15,8 @@ const USER_NOT_LOGGED_IN = 'User%20Not%20Logged%20In'
 
 // add more static pages here if necessary
 const staticPages = {
-	landing: 'landing'
+	landing: 'landing',
+	about: 'about'
 }
 
 // this route loads the landing/home page. It is the primary
@@ -26,6 +27,16 @@ router.get('/', (req, res) => {
 	turbo.pageData('home')
 	.then(static => {
 		res.render('landing', { static: static });
+	})
+	.catch(err => {
+		res.redirect('/error?message=' + err.message)
+	})
+})
+
+router.get('/about', (req, res) => {
+	turbo.pageData('about')
+	.then(static => {
+		res.render('about', { static: static });
 	})
 	.catch(err => {
 		res.redirect('/error?message=' + err.message)
@@ -167,11 +178,6 @@ router.get('/listing/:slug', (req, res) => {
 		res.redirect('/error?message=' + err.message)
 	})
 })
-
-router.get('/about', (req, res) => {
-	res.render('about', null);
-})
-
 
 // this page handles general errors. the error message is passed
 // in as a query parameter with key "message" and rendered in the 
