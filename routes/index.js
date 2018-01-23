@@ -22,21 +22,9 @@ const staticPages = {
 // the key value proposition as well as guide the visitor to
 // a prominent call-to-action registration form:
 router.get('/', (req, res) => {
-	var data = {}
-	controllers.listing.get()
-	.then(listings => {
-		data.listings = listings;
-
-		controllers.user.get(req.query)
-		.then(users => {
-			data.users = [users[0], users[1], users[2]]
-			console.log(data);
-			res.render('landing', data);
-		})
-		.catch(err => {
-			res.redirect('/error?message=' + err.message)
-		})
-		
+	turbo.pageData('home')
+	.then(static => {
+		res.render('landing', { static: static });
 	})
 	.catch(err => {
 		res.redirect('/error?message=' + err.message)
