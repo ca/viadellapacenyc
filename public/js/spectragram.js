@@ -55,6 +55,7 @@ if (typeof Object.create !== 'function') {
 				getData = '/users/search?q=' + self.options.query + '&count=' + self.options.max + '&access_token='+ self.accessData.accessToken + '';
 
 				self.fetch(getData).done(function ( results ) {
+					console.log(results);
 					if(results.data.length){
 						self.getRecentMedia(results.data[0].id);
 					}else{
@@ -161,7 +162,7 @@ if (typeof Object.create !== 'function') {
 	//Instagram Access Data
 	jQuery.fn.spectragram.accessData = {
         accessToken: null,
-		clientID: null        
+		clientID: null
     };
 
 })(jQuery, window, document);

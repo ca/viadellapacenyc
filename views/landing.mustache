@@ -40,19 +40,16 @@
       <section class="no-pad">
         <div class="photo-container medium-5 right-align divider-background">
           <div class="background-image-holder parallax-background">
-            <img class="background-image" alt="Attica Restaurant Template" src="img/side1.jpg">
+            <img class="background-image" alt="{{static.restaurant_name}}" src="https://lh3.googleusercontent.com/8uoJzyWIedJ2OjJoaTm3rXy7TPk3iaVVtyMr4wqlWcH5uuUcLNbUvlCDtGSWEfT46J6azuuOVet73suLoVkTFo4zuQ">
           </div>
         </div>
         <div class="row">
           <div class="medium-6 columns">
-            <h3>An adventure in freshly foraged produce with rustic flavour &amp; charm</h3>
-            <span class="sub-title sub-title">A trendy new eatery with passion &amp; soul</span>
+            <h3>{{ static.story_title }}</h3>
+            <span class="sub-title sub-title">{{ static.story_tagline }}</span>
             <hr>
             <p class="text-left">
-              Via Della Pace lays in the very center of Rome, just minutes walk from Piazza Navona. Its wonderful little church called “Chiesa della Pace” features paintings by Raffaello that are known all over the world.
-            </p>
-            <p class="text-left">
-              The name was chosen by one of the owners; he went to school in the area and stopped every morning for a cappuccino in the city’s oldest and most renowned cafe’, ”Bar della Pace”. Walking into our New York restaurant you can still get a feel of those friendly conversations full of gestures; maybe over an Espresso or a Negroni cocktail.
+              {{ static.story_description }}
             </p>
             <img alt="Signautre" src="img/signature.png" class="medium-4 small-6">
           </div>
@@ -64,7 +61,7 @@
       <section class="divider-background">
         <div class="background-image-holder parallax-background">
           <div class="overlay background-dark-grey"></div>
-          <img alt="Divider Background" class="background-image" src="img/hero2.jpg">
+          <img alt="Divider Background" class="background-image" src="https://lh3.googleusercontent.com/Z6T5X2J_pG6CdDll-c8bio5ufb9h7xyzU4nLNrgyUO9PPPNQjuWcG4lJtQFLOOvFCirxNgRAzBpEykS0UcpOXpkk">
         </div>
         <div class="row">
           <div class="medium-12 columns text-center">
@@ -266,7 +263,7 @@
 
       <!-- PRESS -->
       <a id="press" class="in-page-link"></a>
-      <section class="divider-background"><!--being video divider-->
+      <section class="divider-background"><!--begin video divider-->
         <div class="background-image-holder parallax-background">
           <div class="overlay background-dark-grey"></div>
           <img alt="Divider Background" class="background-image" src="img/hero3.jpg">
@@ -285,7 +282,7 @@
           <div class="medium-12 columns text-center">
             <div class="headline-style-2">
               <h3 class="text-white">press &amp; accolades</h3>
-              <span class="sub-title text-white">Attica In The Press</span>
+              <span class="sub-title text-white">{{static.restaurant_name}} in the Press</span>
               <div class="line"></div>
             </div>
           </div>
@@ -295,7 +292,7 @@
       <section class="no-pad">
         <div class="photo-container medium-5 left-align divider-background">
           <div class="background-image-holder parallax-background">
-            <img class="background-image" alt="Attica Restaurant Template" src="img/side2.jpg">
+            <img class="background-image" alt="{{static.restaurant_name}}" src="img/side2.jpg">
           </div>
         </div>
 
@@ -314,29 +311,32 @@
         </div>
       </section>
 
+      <!-- REVIEWS -->
       <section class="background-mid-grey pad-small reviews">
         <div class="row">
           <div class="medium-4 columns text-center">
-            <h4>Good Food Weekly</h4>
-            <span class="sub-title block push-small">Absolutely sublime cuisine</span>
+            <h4>Anita Vinje</h4>
+            <span class="sub-title block push-small">Little slice of decadence</span>
             <i class="icon icon_star"></i>
             <i class="icon icon_star"></i>
-            <i class="icon icon_star"></i>
-            <i class="icon icon_star"></i>
-            <i class="icon icon_star-half"></i>
-          </div>
-      
-          <div class="medium-4 columns text-center">
-            <h4>Maguisine</h4>
-            <span class="sub-title block push-small">Melbourne's most divine eatery - 3/3</span>
             <i class="icon icon_star"></i>
             <i class="icon icon_star"></i>
             <i class="icon icon_star"></i>
           </div>
       
           <div class="medium-4 columns text-center">
-            <h4>Fine Dining Magazine</h4>
-            <span class="sub-title block push-small">Like no other - Attica is divine</span>
+            <h4>Karen Kelley</h4>
+            <span class="sub-title block push-small">Great menu selection and wines</span>
+            <i class="icon icon_star"></i>
+            <i class="icon icon_star"></i>
+            <i class="icon icon_star"></i>
+            <i class="icon icon_star"></i>
+            <i class="icon icon_star"></i>
+          </div>
+      
+          <div class="medium-4 columns text-center">
+            <h4>Scott Christensen</h4>
+            <span class="sub-title block push-small">Lasagna and carbonara were to die for</span>
             <i class="icon icon_star"></i>
             <i class="icon icon_star"></i>
             <i class="icon icon_star"></i>
@@ -350,7 +350,7 @@
       <a id="gallery" class="in-page-link"></a>
       <section class="gallery-slider">
         <ul class="slides">
-          <li class="background-paralla"><img alt="Slide Image" class="background-image" src="img/gallery2.jpg"></li>
+          <li class="background-paralla"><img alt="Slide Image" class="background-image" src="https://lh3.googleusercontent.com/G3oFMBKgGjPO7CBy0uak5rGjU1F1i0GaeNKABeeYhM0h9b5xcOc-oxnKCtbWkxe-XoxL99jfFSvCO2YREn0OLC7UeQ"></li>
           <li class="background-paralla"><img alt="Slide Image" class="background-image" src="img/gallery1.jpg"></li>
         </ul>
       </section>
@@ -362,7 +362,7 @@
             <span class="sub-title">Insta <i class="icon social_instagram"></i> Gram</span>
           </div>
         </div>
-        <div class="instafeed" data-user-name="cannellevanille">
+        <div class="instafeed" data-user-name="viadellapace">
           <ul></ul>
         </div>
       </section>
@@ -520,15 +520,15 @@
           <div class="medium-4 medium-centered columns text-center">
             <img alt="logo" src="img/logo.png" class="small-4 push-large"> 
             <div>
-              <a href="#"><i class="icon social_twitter"></i></a>
-              <a href="#"><i class="icon social_facebook"></i></a>
-              <a href="#"><i class="icon social_instagram"></i></a>
+              <a href="{{static.twitter}}"><i class="icon social_twitter"></i></a>
+              <a href="{{static.facebook}}"><i class="icon social_facebook"></i></a>
+              <a href="{{static.instagram}}"><i class="icon social_instagram"></i></a>
             </div>
             <p class="text-white">
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </p>
-            <a href="#" class="large-link text-white">hello@atticatheme.net</a><br>
-            <a href="#" class="large-link text-white">03 5732 8372</a>
+            <a href="mailto:{{static.email}}" class="large-link text-white">{{static.email}}</a><br>
+            <a href="#" class="large-link text-white">{{static.phone}}</a>
           </div>
         </div>
       </section>
