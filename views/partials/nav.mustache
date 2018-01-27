@@ -3,7 +3,7 @@
     <div class="nav-toggle"><i class="icon icon_menu"></i></div>
 
     <div class="push-large">
-      <img alt="{{static.restaurant_name}}" src="img/logo.png" class="logo"><br>
+      <img alt="{{env.RESTAURANT_NAME}}" src="img/logo.png" class="logo"><br>
       <span class="sub-title text-white">Restaurant &amp; Bar</span>
       <div class="line"></div>
     </div>
@@ -19,14 +19,14 @@
     </ul>
 
     <div class="bottom-content">
-      <a href="{{static.twitter}}"><i class="icon social_twitter"></i></a>
-      <a href="{{static.facebook}}"><i class="icon social_facebook"></i></a>
-      <a href="{{static.instagram}}"><i class="icon social_instagram"></i></a>
+      <a href="{{env.TWITTER}}"><i class="icon social_twitter"></i></a>
+      <a href="{{env.FACEBOOK}}"><i class="icon social_facebook"></i></a>
+      <a href="{{env.INSTAGRAM}}"><i class="icon social_instagram"></i></a>
       <ul class="contact-details">
         <li><span>Rome, Italy</span></li>
         <li><span>New York, New York</span></li>
-        <li><a href="mailto:{{static.email}}">{{static.email}}</a></li>
-        <li><span>{{static.phone}}</span></li>
+        <li><a href="mailto:{{env.EMAIL}}">{{env.EMAIL}}</a></li>
+        <li><span>{{env.PHONE}}</span></li>
       </ul>
     </div>
   </nav>

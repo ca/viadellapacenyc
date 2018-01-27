@@ -40,7 +40,7 @@
       <section class="no-pad">
         <div class="photo-container medium-5 right-align divider-background">
           <div class="background-image-holder parallax-background">
-            <img class="background-image" alt="{{static.restaurant_name}}" src="/images/caprese.jpg">
+            <img class="background-image" alt="{{env.RESTAURANT_NAME}}" src="/images/caprese.jpg">
           </div>
         </div>
         <div class="row">
@@ -282,7 +282,7 @@
           <div class="medium-12 columns text-center">
             <div class="headline-style-2">
               <h3 class="text-white">press &amp; accolades</h3>
-              <span class="sub-title text-white">{{static.restaurant_name}} in the Press</span>
+              <span class="sub-title text-white">{{env.RESTAURANT_NAME}} in the Press</span>
               <div class="line"></div>
             </div>
           </div>
@@ -292,7 +292,7 @@
       <section class="no-pad">
         <div class="photo-container medium-5 left-align divider-background">
           <div class="background-image-holder parallax-background">
-            <img class="background-image" alt="{{static.restaurant_name}}" src="/images/pasta.jpg">
+            <img class="background-image" alt="{{env.RESTAURANT_NAME}}" src="/images/pasta.jpg">
           </div>
         </div>
 
@@ -407,15 +407,15 @@
           <div class="medium-4 medium-centered columns text-center">
             <img alt="logo" src="img/logo.png" class="small-4 push-large"> 
             <div>
-              <a href="{{static.twitter}}"><i class="icon social_twitter"></i></a>
-              <a href="{{static.facebook}}"><i class="icon social_facebook"></i></a>
-              <a href="{{static.instagram}}"><i class="icon social_instagram"></i></a>
+              <a href="{{env.TWITTER}}"><i class="icon social_twitter"></i></a>
+              <a href="{{env.FACEBOOK}}"><i class="icon social_facebook"></i></a>
+              <a href="{{env.INSTAGRAM}}"><i class="icon social_instagram"></i></a>
             </div>
             <p class="text-white">
               {{static.contact_statement}}
             </p>
-            <a href="mailto:{{static.email}}" class="large-link text-white">{{static.email}}</a><br>
-            <a href="#" class="large-link text-white">{{static.phone}}</a>
+            <a href="mailto:{{env.EMAIL}}" class="large-link text-white">{{env.EMAIL}}</a><br>
+            <a href="#" class="large-link text-white">{{env.PHONE}}</a>
           </div>
         </div>
       </section>

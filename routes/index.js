@@ -26,7 +26,7 @@ const staticPages = {
 router.get('/', (req, res) => {
 	turbo.pageData('home')
 	.then(static => {
-		res.render('landing', { static: static });
+		res.render('landing', { static: static, env: process.env });
 	})
 	.catch(err => {
 		res.redirect('/error?message=' + err.message)
@@ -36,7 +36,7 @@ router.get('/', (req, res) => {
 router.get('/about', (req, res) => {
 	turbo.pageData('home')
 	.then(static => {
-		res.render('about', { static: static });
+		res.render('about', { static: static, env: process.env });
 	})
 	.catch(err => {
 		res.redirect('/error?message=' + err.message)
